@@ -32,9 +32,9 @@
         <field name="inherit_id" ref="project.view_task_form2"/>
         <field name="arch" type="xml">
             <xpath expr="//h1/field[@name='priority']" position="after">
-                <span>[</span>
-                <field name="task_number"/>
-                <span>]</span>
+                <span attrs="{'invisible': [('task_number', '=', -1)]}">[</span>
+                <field name="task_number" attrs="{'invisible': [('task_number', '=', -1)]}"/>
+                <span attrs="{'invisible': [('task_number', '=', -1)]}">]</span>
             </xpath>
         </field>
     </record>
